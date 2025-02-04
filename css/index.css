@@ -1,0 +1,195 @@
+body {
+    margin: 0px;
+    background-color: whitesmoke;
+}
+p.div {
+    text-align: center;
+}
+#otsikko1 {
+    text-align: center;
+}
+.aliheader {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 200px;
+}
+.header {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 198px;
+    background-color: rgb(0, 38, 68); /*(0, 49, 83); Prussian*/
+}
+.yläalue {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 120px;
+    background-color: rgba(255, 0, 0, 0.0);
+}
+.navigaatio {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 58px;
+    bottom: 0;
+    background-color: rgb(0, 38, 68);
+    margin-right: auto;
+    margin-left: auto;
+    align-items: center;
+}
+
+.navitem {
+    position: relative;
+    display: inline-block;
+    height: 56px;
+    width: 25%;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: aliceblue;
+    border: 1px solid aliceblue;
+}
+#headernimi {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    font-size: 80px;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+a:link {
+    text-decoration: none;
+}
+
+.eka {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+}
+body {
+    height: 100%;
+    width: 100%;
+}
+.main {
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    background-color: rgb(100, 105,130);
+    width: 73%;
+    padding: 1%;
+    /*height: 800px;*/
+    min-height: 80vh;
+    margin-left: 12%;
+    margin-right: 12%;
+    margin-bottom: 50px;
+    margin-top: 100px;
+}
+.flex {
+    position: relative;
+    display: flex;
+}
+.omakuva-alue {
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+#omakuva {
+    width: 450px;
+    position: relative;
+    display: inline;
+    left: 0px;
+    box-sizing: border-box;
+}
+
+footer {
+    position: absolute;
+    display:flexbox;
+    bottom: -120px;
+    width: 100%;
+    padding: 12px 0px 12px 0px;
+    background-color: aquamarine;
+    align-items: center;
+    background-color: rgb(36, 66, 99);
+    /*margin-top: auto;
+    margin-bottom: auto;*/
+}
+.yhteistiedot {
+    margin-left: 12px;
+    display: inline-block;
+    border-color: black;
+    background-color: white;
+}
+.yhteistiedot > p {
+    margin: 4px;
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+}
+
+
+.kielet {
+    position: absolute;
+    display: flexbox;
+    bottom: 0px;
+    right: 0px;
+    width: 5%;
+}
+#suomi {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+#english {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+.lataus {
+    text-decoration: underline !important;
+}
+#valkoinen {
+    background-color: white;
+}
+#xd {
+    width: 83%;
+    padding: 1%;
+    margin-left: 7%;
+    margin-right: 7%;
+}
+#xd > img {
+    width: 90%;
+    margin-top: 2%;
+}
+.pdiv {
+    background-color: white !important;
+    position: relative;
+    display: inline-block;
+    width: 96%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+}
+
+#lomake {
+    display: block;
+    position: relative;
+    min-height: 50vh;
+}
+#lomake > label {
+    display: block;
+}
+#lomake > * {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+#widthsmaller {
+    width: 50%;
+    margin-left: 24%;
+    margin-right: 24%;
+}
