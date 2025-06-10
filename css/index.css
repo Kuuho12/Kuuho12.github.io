@@ -59,9 +59,31 @@ p.div {
     color: white;
     margin-top: 20px;
     margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
 }
 a:link {
     text-decoration: none;
+}
+.kielet {
+    position: absolute;
+    display: block;
+    flex-direction: column;
+    bottom: 58px;
+    right: 0px;
+    width: 125.8px;
+    max-width: 10%;
+    max-height: 140px;
+}
+#suomi {
+    position: relative;
+    display: flex;
+    width: 100%;
+}
+#english {
+    position: relative;
+    display: flex;
+    width: 100%;
 }
 
 .eka {
@@ -130,25 +152,6 @@ footer {
     font-size: 16px;
     font-family: 'Courier New', Courier, monospace;
     color: black;
-}
-
-
-.kielet {
-    position: absolute;
-    display: flexbox;
-    bottom: 0px;
-    right: 0px;
-    width: 5%;
-}
-#suomi {
-    position: relative;
-    display: block;
-    width: 100%;
-}
-#english {
-    position: relative;
-    display: block;
-    width: 100%;
 }
 .lataus {
     text-decoration: underline !important;
