@@ -58,14 +58,19 @@ p.div {
     margin-right: auto;
 }
 #headernimi {
+    max-width: 80% !important;
+    position: relative;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-align: center;
     font-size: 80px;
     color: white;
     margin-top: 20px;
     margin-bottom: 20px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+#nimilinkki {
+    width: 80%;
 }
 a:link {
     text-decoration: none;
@@ -200,4 +205,7 @@ footer {
     width: 50%;
     margin-left: 24%;
     margin-right: 24%;
+}
+#bigger {
+    width: 1920px;
 }
