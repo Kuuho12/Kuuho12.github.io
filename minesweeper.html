@@ -17,13 +17,13 @@
                         <a href="miinaharava.html"><img src="kuvat/Flag-Finland.webp" alt="Suomi" id="suomi"></a>
                     </div>
                 <div class="yläalue">
-                    <a href="index.html" id="nimilinkki"><h1 id="headernimi">Kuura Pönkä</h1></a>
+                    <a href="english.html" id="nimilinkki"><h1 id="headernimi">Kuura Pönkä</h1></a>
                 </div>
                 <div class="navigaatio">
                     <a href="cv_en.html" class="navitem" id="CV"><p>CV</p></a>
-                    <a href="library.html" class="navitem" id="kirjasto"><p>Library <br> Group project</p></a>
-                    <a href="paintshop.html" class="navitem" id="Maalaamo"><p>Paint Shop<br> Browser programming display work</p></a>
-                    <a href="chess.html" class="navitem" id="shakki"><p>Chess</p></a>
+                    <a href="library.html" class="navitem" id="kirjasto"><p>Library - Group project</p></a>
+                    <a href="paintshop.html" class="navitem" id="Maalaamo"><p>Paint Shop - Browser programming display work</p></a>
+                    <a href="chess.html" class="navitem" id="shakki"><p>C# Chess</p></a>
                     <a href="minesweeper.html" class="navitem" id="Miinaharava"><p>Minesweeper</p></a>
                     <a href="adventuregame.html" class="navitem" id="C#-tekstiseikkailupeli"><p>C# Console Adventure Game</p></a>
                     <a href="xd_en.html" class="navitem" id="XD-ryhmätyö"><p>XD Group Project</p></a>
@@ -42,7 +42,23 @@
     </div>
   </div>
   <div class="board"></div>
+  <p class="miinaohjeet">Open tiles by left clicking, mark a tile as mine by right clicking and "dash" by right clicking a numbered tile which has the same number of adjacent tiles marked as mines</p>
+   <div style="position: absolute; bottom: 0px;">
+        <p class="miinaohjeet">🡻 I also did a version of this game for Raspberry Pi Sense HAT. Download it by clicking <a href="Ladattavat/MIINAHARAVA.zip">here</a>. 🡻</p>
     </div>
+    </div>
+    <div id="trinketContainer">
+        <div class="latausteksti">Loading...</div>
+        <iframe src="https://trinket.io/embed/python/9d3c0bf5c645" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen id="trinketFrame"></iframe>
+    </div>
+    <script>
+        document.getElementById('trinketFrame').style.display = "none";
+  document.getElementById('trinketFrame').addEventListener('load', function() {
+    document.querySelector('.latausteksti').style.display = "none";
+    this.style.display = "block";
+  });
+</script>
+
     <footer>
         <form action="">
             <a href="form.html" id="linkki">
@@ -57,5 +73,4 @@
     </footer>
 </div>
 </body>
-
 </html>

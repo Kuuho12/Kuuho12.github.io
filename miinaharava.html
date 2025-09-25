@@ -21,14 +21,14 @@
                 </div>
                 <div class="navigaatio">
                     <a href="cv_fi.html" class="navitem" id="CV"><p>CV</p></a>
-                    <a href="kirjasto.html" class="navitem" id="kirjasto"><p>Kirjasto<br>ryhmätyö</p></a>
-                    <a href="maalaamo.html" class="navitem" id="Maalaamo"><p>Maalaamo <br> Selainohjelmointi näyttötyö</p></a>
-                    <a href="shakki.html" class="navitem" id="shakki"><p>Shakki</p></a>
+                    <a href="kirjasto.html" class="navitem" id="kirjasto"><p>Kirjasto - ryhmätyö</p></a>
+                    <a href="maalaamo.html" class="navitem" id="Maalaamo"><p>Maalaamo - selainohjelmoinnin näyttötyö</p></a>
+                    <a href="shakki.html" class="navitem" id="shakki"><p>C# Shakki</p></a>
                     <a href="miinaharava.html" class="navitem" id="Miinaharava"><p>Miinaharava</p></a>
                     <a href="tekstiseikkailu.html" class="navitem" id="C#-tekstiseikkailupeli"><p>C#-tekstiseikkailupeli</p></a>
                     <a href="xd_fi.html" class="navitem" id="XD-ryhmätyö"><p>XD-ryhmätyö</p></a>
                 </div>
-            </div> <!--XD-ryhmätyö, C#-tekstiseikkailu, Miinaharava, CV,-->
+            </div>
         </div>
     <div class="main">
         <p id="wintext">Voitit</p>
@@ -42,7 +42,23 @@
     </div>
   </div>
   <div class="board"></div>
+  <p class="miinaohjeet">Hiiren vasemmalla avataan ruutuja, hiiren oikealla merkitään ruudut miinoiksi ja kumpaakin samanaikaan painaessa voit "dashata", jos olet merkinnyt ruudun näyttämän luvun verran viereisiä ruutuja miinoiksi</p>
+   <div style="position: absolute; bottom: 0px;">
+        <p class="miinaohjeet">🡻 Tein pelistä myös pyhton-version Raspberry Pi Sense HATille. Voit halutessasi ladata sen <a href="Ladattavat/MIINAHARAVA.zip">tästä</a>. 🡻</p>
     </div>
+    </div>
+    <div id="trinketContainer">
+        <div class="latausteksti">Ladataan...</div>
+        <iframe src="https://trinket.io/embed/python/9d3c0bf5c645" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen id="trinketFrame"></iframe>
+    </div>
+    <script>
+        document.getElementById('trinketFrame').style.display = "none";
+  document.getElementById('trinketFrame').addEventListener('load', function() {
+    document.querySelector('.latausteksti').style.display = "none";
+    this.style.display = "block";
+  });
+</script>
+
     <footer>
         <form action="">
             <a href="lomake.html" id="linkki">
@@ -57,5 +73,4 @@
     </footer>
 </div>
 </body>
-
 </html>
