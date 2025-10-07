@@ -131,19 +131,28 @@ body {
     margin-left: 10%;
     margin-right: 10%;
     margin-bottom: 50px;
-    margin-top: 100px;
+    margin-top: 80px;
 }
 .flex {
     position: relative;
     display: flex;
 }
+.etusivu_esittely {
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.etusivu_teksti {
+    max-width: 820px;
+}
 .omakuva-alue {
     position: relative;
+    width: 1300px;
+    max-width: 60%;
     top: 0px;
-    left: 0px;
 }
 #omakuva {
-    width: 450px;
+    width: 100%;
     position: relative;
     display: inline;
     left: 0px;
@@ -208,7 +217,7 @@ footer {
     vertical-align: top;
     box-sizing: border-box;
 }
-.segmentti img {
+.segmenttikuva {
     max-width: 100%;
     max-height: 515px;
 }

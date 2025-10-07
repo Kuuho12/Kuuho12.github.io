@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/tietovisailu.css">
+    <title>Tietovisailu</title>
+</head>
+<body>
+    <div class="eka">
+       <div class="aliheader">
+            <div class="header">
+                <div class="kielet">
+                        <a href="cv_en.html"><img src="kuvat/Flag-United-Kingdom.webp" alt="English" id="english"></a>
+                        <a href="cv_fi.html"><img src="kuvat/Flag-Finland.webp" alt="Suomi" id="suomi"></a>
+                    </div>
+                <div class="yläalue">
+                    <a href="index.html" id="nimilinkki"><h1 id="headernimi">Kuura Pönkä</h1></a>
+                </div>
+                <div class="navigaatio">
+                    <a href="cv_fi.html" class="navitem" id="CV"><p>CV</p></a>
+                    <a href="kirjasto.html" class="navitem" id="kirjasto"><p>Kirjasto - ryhmätyö</p></a>
+                    <a href="maalaamo.html" class="navitem" id="Maalaamo"><p>Maalaamo - selainohjelmoinnin näyttötyö</p></a>
+                    <a href="shakki.html" class="navitem" id="shakki"><p>C# Shakki</p></a>
+                    <a href="miinaharava.html" class="navitem" id="Miinaharava"><p>Miinaharava</p></a>
+                    <a href="tekstiseikkailu.html" class="navitem" id="C#-tekstiseikkailupeli"><p>C#-tekstiseikkailupeli</p></a>
+                    <a href="xd_fi.html" class="navitem" id="XD-ryhmätyö"><p>XD-ryhmätyö</p></a>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <header>
+        <h1>Tervetuloa tietovisailuun!</h1>
+        <p>Testaa tietosi eri aihealueista</p>
+        <div id="kaikkibuttonscontainer">
+        <div class="buttonscontainer" id="helpot">
+            <p>Helppo</p>
+            <div class="buttondiv">
+                <button type="button" id="helppo_tieto">Jokainen</button>
+                <button type="button" id="helppo_yleistieto">Yleistieto</button>
+                <button type="button" id="helppo_maantieto">Maantieto</button>
+                <button type="button" id="helppo_historia">Historia</button>
+                <button type="button" id="helppo_tiede">Tiede</button>
+                <button type="button" id="helppo_kulttuuri">Kulttuuri</button>
+            </div>
+        </div>
+        <div class="buttonscontainer" id="keskivaikeat">
+            <p>Keskivaikea</p>
+            <div class="buttondiv">
+                <button type="button" id="tieto">Jokainen</button>
+                <button type="button" id="yleistieto">Yleisieto</button>
+                <button type="button" id="maantieto">Maantieto</button>
+                <button type="button" id="historia">Historia</button>
+                <button type="button" id="tiede">Tiede</button>
+                <button type="button" id="kulttuuri">Kulttuuri</button>
+            </div>
+        </div>
+        <div class="buttonscontainer" id="vaikeat">
+            <p>Vaikea</p>
+            <div class="buttondiv">
+                <button type="button" id="vaikea_tieto">Jokainen</button>
+                <button type="button" id="vaikea_yleistieto">Yleisieto</button>
+                <button type="button" id="vaikea_maantieto">Maantieto</button>
+                <button type="button" id="vaikea_historia">Historia</button>
+            </div>
+        </div>
+        </div>
+    </header>
+    <div class="main2">
+        <div class="visailudiv">
+            <p id="kysymys"></p>
+            <div class="tulosdiv">
+                <p id="oikein">0</p>
+                <p id="tulos">​</p>
+                <p id="vaarin">0</p>
+            </div>
+            <div id="vaihtoehdot">
+                <div class="vaihto-osa">
+                    <div class="alavaihtodiv">
+                        <button type="button" id="btnA" data-vaihtoehto="a">A:</button>
+                    </div>
+                    <div class="alavaihtodiv">
+                        <button type="button" id="btnB" data-vaihtoehto="b">B:</button>
+                    </div>
+                </div>
+                <div class="vaihto-osa">
+                    <div class="alavaihtodiv">
+                        <button type="button" id="btnC" data-vaihtoehto="c">C:</button>
+                    </div>
+                    <div class="alavaihtodiv">
+                        <button type="button" id="btnD" data-vaihtoehto="d">D:</button>
+                    </div>
+                </div>
+                <div class="vaihto-osa">
+                    <div class="alavaihtodiv">
+                        <button type="button" id="btnE" data-vaihtoehto="e">E:</button>
+                    </div>
+                    <div class="alavaihtodiv">
+                        <button type="button" id="btnF" data-vaihtoehto="f">F:</button>
+                    </div>
+                </div>
+            </div>
+            <div class="toiminnot buttondiv">
+                    <button type="button" id="lopeta">Lopeta</button>
+                    <button type="button" id="seuraava">Seuraava</button>
+            </div>
+        </div>
+    </div>
+    <script src="javascript/kysymykset.js"></script>
+    <script src="javascript/tietovisailu.js"></script>
+        </div>
+        <footer>
+            <form action="">
+                <a href="lomake.html" id="linkki">
+                <fieldset class="yhteistiedot">
+                <p><b>Kuura Pönkä</b></p>
+                <p> <b>2024</b></p>
+                <p><b>044 9876841</b></p>
+                <p><b>kuuho24gmail.com</b></p>
+            </fieldset>
+            </a>
+            </form>
+        </footer>
+    </div>
+</body>
+</html>
