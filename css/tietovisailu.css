@@ -386,6 +386,9 @@ header p {
     align-items: stretch;
     border: 1px solid white;
 }
+#hyvinhelpot {
+    background-color: blue;
+}
 #helpot {
     background-color: green;
 }

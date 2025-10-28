@@ -1,20 +1,26 @@
 const helppoTietoButton = document.getElementById("helppo_tieto")
+const helppoYleistietoButton = document.getElementById("helppo_yleistieto")
 const helppoHistoriaButton = document.getElementById("helppo_historia")
 const helppoMaantietoButton = document.getElementById("helppo_maantieto")
 const helppoTiedeButton = document.getElementById("helppo_tiede")
 const helppoKulttuuriButton = document.getElementById("helppo_kulttuuri")
+const hyvinHelppoTietoButton = document.getElementById("hyvin_helppo_tieto")
+const hyvinHelppoYleistietoButton = document.getElementById("hyvin_helppo_yleistieto")
+const hyvinHelppoHistoriaButton = document.getElementById("hyvin_helppo_historia")
+const hyvinHelppoMaantietoButton = document.getElementById("hyvin_helppo_maantieto")
+const hyvinHelppoTiedeButton = document.getElementById("hyvin_helppo_tiede")
+const hyvinHelppoKulttuuriButton = document.getElementById("hyvin_helppo_kulttuuri")
 const tietoButton = document.getElementById("tieto")
 const historiaButton = document.getElementById("historia")
 const maantietoButton = document.getElementById("maantieto")
 const tiedeButton = document.getElementById("tiede")
 const kulttuuriButton = document.getElementById("kulttuuri")
 const vaikeaTietoButton = document.getElementById("vaikea_tieto")
-const helppoYleistietoButton = document.getElementById("helppo_yleistieto")
 const yleistietoButton = document.getElementById("yleistieto")
 const vaikeaYleistietoButton = document.getElementById("vaikea_yleistieto")
 const vaikeaHistoriaButton = document.getElementById("vaikea_historia")
 const vaikeaMaantietoButton = document.getElementById("vaikea_maantieto")
-const visojenButtons = [helppoTietoButton, helppoHistoriaButton, helppoMaantietoButton, tietoButton, historiaButton, maantietoButton, vaikeaTietoButton, helppoYleistietoButton, yleistietoButton, vaikeaYleistietoButton, vaikeaHistoriaButton, vaikeaMaantietoButton, helppoTiedeButton, helppoKulttuuriButton, tiedeButton, kulttuuriButton]
+const visojenButtons = [helppoTietoButton, helppoHistoriaButton, helppoMaantietoButton, tietoButton, historiaButton, maantietoButton, vaikeaTietoButton, helppoYleistietoButton, hyvinHelppoTietoButton, hyvinHelppoYleistietoButton, hyvinHelppoHistoriaButton, hyvinHelppoMaantietoButton, hyvinHelppoKulttuuriButton, hyvinHelppoTiedeButton, yleistietoButton, vaikeaYleistietoButton, vaikeaHistoriaButton, vaikeaMaantietoButton, helppoTiedeButton, helppoKulttuuriButton, tiedeButton, kulttuuriButton]
 const vaihtobuttondivs = document.querySelectorAll(".vaihtobuttondiv")
 const alaVaihtoOsa = document.getElementsByClassName("vaihto-osao")[2]
 const vasenAlavaihtodiv = document.getElementsByClassName("alavaihtodiv")[4]
@@ -147,6 +153,96 @@ helppoKulttuuriButton.addEventListener("click", () => {
         })
         BtnToBlock(4)
         valittuKysymysLista = helpotKysymykset.filter((kysymys) => {
+            return kysymys[kysymys.length - 1].includes("kulttuuri");
+        })
+        HelppoVisa()
+    }
+})
+
+hyvinHelppoTietoButton.addEventListener("click", () => {
+    if (visa == undefined) {
+        vaarinElement.style.display = "block"
+        oikeinElement.style.display = "block"
+        visa = "hyvinHelppoTieto"
+        visojenButtons.forEach((button) => {
+            button.setAttribute("disabled", "true")
+        })
+        BtnToBlock(4)
+        valittuKysymysLista = hyvinHelpotKysymykset
+        HelppoVisa()
+    }
+})
+hyvinHelppoHistoriaButton.addEventListener("click", () => {
+    if (visa == undefined) {
+        vaarinElement.style.display = "block"
+        oikeinElement.style.display = "block"
+        visa = "hyvinHelppoHistoria"
+        visojenButtons.forEach((button) => {
+            button.setAttribute("disabled", "true")
+        })
+        BtnToBlock(4)
+        valittuKysymysLista = hyvinHelpotKysymykset.filter((kysymys) => {
+            console.log(kysymys[0])
+            return kysymys[kysymys.length - 1].includes("historia");
+        })
+        HelppoVisa()
+    }
+})
+hyvinHelppoMaantietoButton.addEventListener("click", () => {
+    if (visa == undefined) {
+        vaarinElement.style.display = "block"
+        oikeinElement.style.display = "block"
+        visa = "hyvinHelppoMaantieto"
+        visojenButtons.forEach((button) => {
+            button.setAttribute("disabled", "true")
+        })
+        BtnToBlock(4)
+        valittuKysymysLista = hyvinHelpotKysymykset.filter((kysymys) => {
+            return kysymys[kysymys.length - 1].includes("maantieto");
+        })
+        HelppoVisa()
+    }
+})
+hyvinHelppoYleistietoButton.addEventListener("click", () => {
+    if (visa == undefined) {
+        vaarinElement.style.display = "block"
+        oikeinElement.style.display = "block"
+        visa = "hyvinHelppoYleistieto"
+        visojenButtons.forEach((button) => {
+            button.setAttribute("disabled", "true")
+        })
+        BtnToBlock(4)
+        valittuKysymysLista = hyvinHelpotKysymykset.filter((kysymys) => {
+            return kysymys[kysymys.length - 1].includes("yleistieto");
+        })
+        HelppoVisa()
+    }
+})
+hyvinHelppoTiedeButton.addEventListener("click", () => {
+    if (visa == undefined) {
+        vaarinElement.style.display = "block"
+        oikeinElement.style.display = "block"
+        visa = "hyvinHelppoTiede"
+        visojenButtons.forEach((button) => {
+            button.setAttribute("disabled", "true")
+        })
+        BtnToBlock(4)
+        valittuKysymysLista = hyvinHelpotKysymykset.filter((kysymys) => {
+            return kysymys[kysymys.length - 1].includes("tiede");
+        })
+        HelppoVisa()
+    }
+})
+hyvinHelppoKulttuuriButton.addEventListener("click", () => {
+    if (visa == undefined) {
+        vaarinElement.style.display = "block"
+        oikeinElement.style.display = "block"
+        visa = "hyvinHelppoKulttuuri"
+        visojenButtons.forEach((button) => {
+            button.setAttribute("disabled", "true")
+        })
+        BtnToBlock(4)
+        valittuKysymysLista = hyvinHelpotKysymykset.filter((kysymys) => {
             return kysymys[kysymys.length - 1].includes("kulttuuri");
         })
         HelppoVisa()
@@ -474,6 +570,14 @@ function JatkaVisaa() {
             case "helppoKulttuuri":
                 HelppoVisa()
                 return;
+            case "hyvinHelppoYleistieto":
+            case "hyvinHelppoHistoria":
+            case "hyvinHelppoMaantieto":
+            case "hyvinHelppoTieto":
+            case "hyvinHelppoTiede":
+            case "hyvinHelppoKulttuuri":
+                HelppoVisa()
+                return;
             case "vaikeaMaantieto":
             case "vaikeaHistoria":
             case "vaikeaYleistieto":
@@ -485,7 +589,8 @@ function JatkaVisaa() {
                 return
         }
     } else {
-        console.log("Loppu kysymykset")
+        //console.log("Loppu kysymykset")
+        tulleetKysymykset = []
         kysymysTeksti.textContent = "Kysymykset loppuivat"
         tulosTeksti.textContent = "​"
         visa = undefined
