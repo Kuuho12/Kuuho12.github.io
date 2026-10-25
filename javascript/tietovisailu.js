@@ -41,6 +41,15 @@ const lopetaButton = document.getElementById("lopeta")
 const seuraavaButton = document.getElementById("seuraava")
 const vaihtoehtoButtons = [btnA, btnB, btnC, btnD, btnE, btnF]
 
+const kieli = document.documentElement.lang;
+if (kieli === "en") {
+    let pleaseTranslate = document.createElement("p");
+    pleaseTranslate.id = "translate"
+    pleaseTranslate.textContent = "Please translate questions yourself"
+    pleaseTranslate.style.display = "none"
+    document.getElementsByClassName('visailudiv')[0].insertBefore(pleaseTranslate, document.getElementsByClassName('visailudiv')[0].firstChild)
+}
+
 let visa = undefined
 let odottaako = false
 let tulleetKysymykset = []
@@ -49,11 +58,14 @@ let oikeinVastuttu = 0
 let vaarinVastattu = 0
 oikeinElement.textContent = oikeinVastuttu
 vaarinElement.textContent = vaarinVastattu
-kysymysTeksti.textContent = "Valitse visa"
+kysymysTeksti.textContent = kieli === "fi" ? "Valitse visa" : "Choose a quiz"
 
 lopetaButton.addEventListener("click", () => {
-    kysymysTeksti.textContent = "Valitse visa"
+    kysymysTeksti.textContent = kieli === "fi" ? "Valitse visa" : "Choose a quiz"
     tulosTeksti.textContent = "​"
+    if (kieli !== "fi") {
+            document.getElementById("translate").style.display = "none"
+    }
     visa = undefined
     visojenButtons.forEach((button) => {
         button.removeAttribute("disabled")
@@ -73,6 +85,9 @@ helppoTietoButton.addEventListener("click", () => {
     if (visa == undefined) {
         vaarinElement.style.display = "block"
         oikeinElement.style.display = "block"
+        if (kieli !== "fi") {
+            document.getElementById("translate").style.display = "block"
+        }
         visa = "helppoTieto"
         visojenButtons.forEach((button) => {
             button.setAttribute("disabled", "true")
@@ -86,13 +101,15 @@ helppoHistoriaButton.addEventListener("click", () => {
     if (visa == undefined) {
         vaarinElement.style.display = "block"
         oikeinElement.style.display = "block"
+        if (kieli !== "fi") {
+            document.getElementById("translate").style.display = "block"
+        }
         visa = "helppoHistoria"
         visojenButtons.forEach((button) => {
             button.setAttribute("disabled", "true")
         })
         BtnToBlock(4)
         valittuKysymysLista = helpotKysymykset.filter((kysymys) => {
-            console.log(kysymys[0])
             return kysymys[kysymys.length - 1].includes("historia");
         })
         HelppoVisa()
@@ -102,13 +119,16 @@ helppoMaantietoButton.addEventListener("click", () => {
     if (visa == undefined) {
         vaarinElement.style.display = "block"
         oikeinElement.style.display = "block"
+        if (kieli !== "fi") {
+            document.getElementById("translate").style.display = "block"
+        }
         visa = "helppoMaantieto"
         visojenButtons.forEach((button) => {
             button.setAttribute("disabled", "true")
         })
         BtnToBlock(4)
         valittuKysymysLista = helpotKysymykset.filter((kysymys) => {
-            return kysymys[kysymys.length - 1].includes("maantieto");
+            return (kysymys[kysymys.length - 1].includes("maantieto") /*|| kysymys[kysymys.length - 1].includes("luonto")*/);
         })
         HelppoVisa()
     }
@@ -117,6 +137,9 @@ helppoYleistietoButton.addEventListener("click", () => {
     if (visa == undefined) {
         vaarinElement.style.display = "block"
         oikeinElement.style.display = "block"
+        if (kieli !== "fi") {
+            document.getElementById("translate").style.display = "block"
+        }
         visa = "helppoYleistieto"
         visojenButtons.forEach((button) => {
             button.setAttribute("disabled", "true")
@@ -132,6 +155,9 @@ helppoTiedeButton.addEventListener("click", () => {
     if (visa == undefined) {
         vaarinElement.style.display = "block"
         oikeinElement.style.display = "block"
+        if (kieli !== "fi") {
+            document.getElementById("translate").style.display = "block"
+        }
         visa = "helppoTiede"
         visojenButtons.forEach((button) => {
             button.setAttribute("disabled", "true")
@@ -147,6 +173,9 @@ helppoKulttuuriButton.addEventListener("click", () => {
     if (visa == undefined) {
         vaarinElement.style.display = "block"
         oikeinElement.style.display = "block"
+        if (kieli !== "fi") {
+            document.getElementById("translate").style.display = "block"
+        }
         visa = "helppoKulttuuri"
         visojenButtons.forEach((button) => {
             button.setAttribute("disabled", "true")
@@ -163,6 +192,9 @@ hyvinHelppoTietoButton.addEventListener("click", () => {
     if (visa == undefined) {
         vaarinElement.style.display = "block"
         oikeinElement.style.display = "block"
+        if (kieli !== "fi") {
+            document.getElementById("translate").style.display = "block"
+        }
         visa = "hyvinHelppoTieto"
         visojenButtons.forEach((button) => {
             button.setAttribute("disabled", "true")
@@ -176,13 +208,15 @@ hyvinHelppoHistoriaButton.addEventListener("click", () => {
     if (visa == undefined) {
         vaarinElement.style.display = "block"
         oikeinElement.style.display = "block"
+        if (kieli !== "fi") {
+            document.getElementById("translate").style.display = "block"
+        }
         visa = "hyvinHelppoHistoria"
         visojenButtons.forEach((button) => {
             button.setAttribute("disabled", "true")
         })
         BtnToBlock(4)
         valittuKysymysLista = hyvinHelpotKysymykset.filter((kysymys) => {
-            console.log(kysymys[0])
             return kysymys[kysymys.length - 1].includes("historia");
         })
         HelppoVisa()
@@ -192,6 +226,9 @@ hyvinHelppoMaantietoButton.addEventListener("click", () => {
     if (visa == undefined) {
         vaarinElement.style.display = "block"
         oikeinElement.style.display = "block"
+        if (kieli !== "fi") {
+            document.getElementById("translate").style.display = "block"
+        }
         visa = "hyvinHelppoMaantieto"
         visojenButtons.forEach((button) => {
             button.setAttribute("disabled", "true")
@@ -207,6 +244,9 @@ hyvinHelppoYleistietoButton.addEventListener("click", () => {
     if (visa == undefined) {
         vaarinElement.style.display = "block"
         oikeinElement.style.display = "block"
+        if (kieli !== "fi") {
+            document.getElementById("translate").style.display = "block"
+        }
         visa = "hyvinHelppoYleistieto"
         visojenButtons.forEach((button) => {
             button.setAttribute("disabled", "true")
@@ -222,6 +262,9 @@ hyvinHelppoTiedeButton.addEventListener("click", () => {
     if (visa == undefined) {
         vaarinElement.style.display = "block"
         oikeinElement.style.display = "block"
+        if (kieli !== "fi") {
+            document.getElementById("translate").style.display = "block"
+        }
         visa = "hyvinHelppoTiede"
         visojenButtons.forEach((button) => {
             button.setAttribute("disabled", "true")
@@ -237,6 +280,9 @@ hyvinHelppoKulttuuriButton.addEventListener("click", () => {
     if (visa == undefined) {
         vaarinElement.style.display = "block"
         oikeinElement.style.display = "block"
+        if (kieli !== "fi") {
+            document.getElementById("translate").style.display = "block"
+        }
         visa = "hyvinHelppoKulttuuri"
         visojenButtons.forEach((button) => {
             button.setAttribute("disabled", "true")
@@ -254,6 +300,9 @@ tietoButton.addEventListener("click", () => {
         //vasenAlavaihtodiv.style.width = "0px"
         vaarinElement.style.display = "block"
         oikeinElement.style.display = "block"
+        if (kieli !== "fi") {
+            document.getElementById("translate").style.display = "block"
+        }
         visa = "tieto"
         visojenButtons.forEach((button) => {
             button.setAttribute("disabled", "true")
@@ -267,6 +316,9 @@ historiaButton.addEventListener("click", () => {
     if (visa == undefined) {
         vaarinElement.style.display = "block"
         oikeinElement.style.display = "block"
+        if (kieli !== "fi") {
+            document.getElementById("translate").style.display = "block"
+        }
         visa = "historia"
         visojenButtons.forEach((button) => {
             button.setAttribute("disabled", "true")
@@ -282,6 +334,9 @@ maantietoButton.addEventListener("click", () => {
     if (visa == undefined) {
         vaarinElement.style.display = "block"
         oikeinElement.style.display = "block"
+        if (kieli !== "fi") {
+            document.getElementById("translate").style.display = "block"
+        }
         visa = "maantieto"
         visojenButtons.forEach((button) => {
             button.setAttribute("disabled", "true")
@@ -297,6 +352,9 @@ yleistietoButton.addEventListener("click", () => {
     if (visa == undefined) {
         vaarinElement.style.display = "block"
         oikeinElement.style.display = "block"
+        if (kieli !== "fi") {
+            document.getElementById("translate").style.display = "block"
+        }
         visa = "yleistieto"
         visojenButtons.forEach((button) => {
             button.setAttribute("disabled", "true")
@@ -312,6 +370,9 @@ tiedeButton.addEventListener("click", () => {
     if (visa == undefined) {
         vaarinElement.style.display = "block"
         oikeinElement.style.display = "block"
+        if (kieli !== "fi") {
+            document.getElementById("translate").style.display = "block"
+        }
         visa = "tiede"
         visojenButtons.forEach((button) => {
             button.setAttribute("disabled", "true")
@@ -327,6 +388,9 @@ kulttuuriButton.addEventListener("click", () => {
     if (visa == undefined) {
         vaarinElement.style.display = "block"
         oikeinElement.style.display = "block"
+        if (kieli !== "fi") {
+            document.getElementById("translate").style.display = "block"
+        }
         visa = "kulttuuri"
         visojenButtons.forEach((button) => {
             button.setAttribute("disabled", "true")
@@ -343,6 +407,9 @@ vaikeaTietoButton.addEventListener("click", () => {
     if (visa == undefined) {
         vaarinElement.style.display = "block"
         oikeinElement.style.display = "block"
+        if (kieli !== "fi") {
+            document.getElementById("translate").style.display = "block"
+        }
         visa = "vaikeaTieto"
         visojenButtons.forEach((button) => {
             button.setAttribute("disabled", "true")
@@ -356,6 +423,9 @@ vaikeaYleistietoButton.addEventListener("click", () => {
     if (visa == undefined) {
         vaarinElement.style.display = "block"
         oikeinElement.style.display = "block"
+        if (kieli !== "fi") {
+            document.getElementById("translate").style.display = "block"
+        }
         visa = "vaikeaYleistieto"
         visojenButtons.forEach((button) => {
             button.setAttribute("disabled", "true")
@@ -371,6 +441,9 @@ vaikeaHistoriaButton.addEventListener("click", () => {
     if (visa == undefined) {
         vaarinElement.style.display = "block"
         oikeinElement.style.display = "block"
+        if (kieli !== "fi") {
+            document.getElementById("translate").style.display = "block"
+        }
         visa = "vaikeaHistoria"
         visojenButtons.forEach((button) => {
             button.setAttribute("disabled", "true")
@@ -386,6 +459,9 @@ vaikeaMaantietoButton.addEventListener("click", () => {
     if (visa == undefined) {
         vaarinElement.style.display = "block"
         oikeinElement.style.display = "block"
+        if (kieli !== "fi") {
+            document.getElementById("translate").style.display = "block"
+        }
         visa = "vaikeaMaantieto"
         visojenButtons.forEach((button) => {
             button.setAttribute("disabled", "true")
@@ -459,7 +535,7 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 function shuffleKysymys(array) { //Fisher-Yatesis muunnelma
-    console.log(array)
+    //console.log(array)
     for (let i = array.length - 3; i > 1; i--) {
         const j = Math.floor(Math.random() * (i)) + 1;
         [array[i], array[j]] = [array[j], array[i]]; // Swap
@@ -591,8 +667,11 @@ function JatkaVisaa() {
     } else {
         //console.log("Loppu kysymykset")
         tulleetKysymykset = []
-        kysymysTeksti.textContent = "Kysymykset loppuivat"
+        kysymysTeksti.textContent =  kieli === "fi" ? "Kysymykset loppuivat" : "Questions finished"
         tulosTeksti.textContent = "​"
+        if (kieli !== "fi") {
+            document.getElementById("translate").style.display = "none"
+        }
         visa = undefined
         visojenButtons.forEach((button) => {
             button.removeAttribute("disabled")

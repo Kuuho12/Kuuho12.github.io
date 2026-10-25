@@ -16,7 +16,7 @@ const kysymykset = [// kysymys, a, b, c, d, e oikea vastaaus, aihealue(et). Olis
     ["Mikä oli Mesopotamian ensimmäinen tunnettu sivilisaatio?", "Assyyrialaiset", "Babylonialaiset", "Kaldealaiset", "Sumerit", "Akkadilaiset", "d", ["yleistieto", "historia"]],
     ["Kuka on Suomen menestyinen urheilija Olympialaisissa?", "Paavo Nurmi", "Jari Litmanen", "Lasse Viren", "Matti Nykänen", "Teemu Selänne", "a", ["yleistieto", "urheilu", "suomi"]],
     ["Kuka heistä ei ole suomalainen nobel-palkinnon voittaja?", "Alvar Aalto", "Artturi Ilmari Virtanen", "Bengt Holmström", "Martti Ahtisaari", "Frans Eemil Sillanpää", "a", ["yleistieto", "suomi"]],
-    ['Kuka on kirjoittanut kirjan "Sinuhe egyptiläinen?"', "Mika Waltari", "F.E. Sillanpää", "Väinö Linna", "Ilkka Remes", "Tove Jansson", "c", ["yleistieto", "kulttuuri", "suomi"]],
+    ['Kuka on kirjoittanut kirjan "Sinuhe egyptiläinen?"', "Mika Waltari", "F.E. Sillanpää", "Väinö Linna", "Ilkka Remes", "Tove Jansson", "a", ["yleistieto", "kulttuuri", "suomi"]],
     ["Minä vuonna Wrightin veljekset lensivät ensimmäisen lentonsa lentokoneella?", "1908", "1937", "1899", "1913", "1903", "e", ["yleistieto", "historia", "tiede"]],
     ["Kuka heistä ei ollut kreikkalainen filosofi?", "Sokrates", "Platon", "Aristoteles", "Hippokrates", "Pythagoras", "d", ["yleistieto", "historia"]],
     ["Kuka heistä ei ole kreikkalainen jumala?", "Zeus", "Mars", "Hades", "Poseidon", "Ares", "b", ["yleistieto", "kulttuuri", "historia"]],
@@ -65,7 +65,7 @@ const kysymykset = [// kysymys, a, b, c, d, e oikea vastaaus, aihealue(et). Olis
     ["Mistä maasta Godzilla on peräisin?", "Japanista", "Etelä-Koreasta", "Yhdysvalloista", "Taiwanista", "Kiinasta", "a", ["yleistieto", "kulttuuri"]],
     ["Mikä seuraavista ei ole espanjan kielen sana?", "Uno", "Diablo", "Ciao", "Gracias", "Adiós", "c", ["yleistieto", "kulttuuri"]],
     ["Mikä salmi erottaa Välimeren Atlantin valtamerestä?", "Magalhãesinsalmi", "Bosporinsalmi", "Malakansalmi", "Hormuzinsalmi", "Gibraltarinsalmi", "e", ["maantieto"]],
-    ["Mikä seuraavista ei ollut yksi talvisodan taisteluista?", "Talin–Ihantalan taistelu", "Raatteen tien taistelu", "Tolvajärven taistelu", "Kollaan taistelu", "Taipaleen taistelu", ["historia"]],
+    ["Mikä seuraavista ei ollut yksi talvisodan taisteluista?", "Talin–Ihantalan taistelu", "Raatteen tien taistelu", "Tolvajärven taistelu", "Kollaan taistelu", "Taipaleen taistelu", "a", ["historia"]],
     ["Mikä seuraavista ei sijaitse Italian valtiossa?", /*"Colosseum",*/ "Monte Cassino", "Firenze", "Pisan kalteva torni", "Pompeji", "Vatikaani", "e", ["yleistieto", "maantieto"]],
     ["Mikä seuraavista ei ole suomalainen keksintö?", "Matkapuhelin", "Astiankuivauskaappi", "Molotovin cocktail", "Sykemittari", "Linux", "a", ["yleistieto", "historia", "suomi"]],
     ["Missä Machu Picchu sijaitsee?", "Chilessä", "Meksikossa", "Brasiliassa", "Kolumbiassa", "Perussa", "e", ["maantieto"]],
@@ -90,7 +90,7 @@ const kysymykset = [// kysymys, a, b, c, d, e oikea vastaaus, aihealue(et). Olis
     ["Missä Timbuktu sijaitsee?", "Malissa", "Ghanassa", "Nigeriassa", "Guineassa", "Mauritaniassa", "a", ["maantieto"]],
     ["Kuka heistä ei kertaakaan voittanut Nobel-palkintoa?", "Nikola Tesla", "Niels Bohr", "Wilhelm Röntgen", "Enrico Fermi", "Max Planck", "a", ["historia", "tiede"]],
     ["Kuinka suuri osa ilmasta suunnilleen on happea?", "20%", "40%", "60%", "80%", "90%", "a", ["yleistieto", "tiede"]],
-    ["Mikä on Brasilian pääkaupunki?", "Brasília", "São Paulo", "Salvador", "Rio de Janeiro", "a", ["yleistieto", "maantieto"]],
+    ["Mikä on Brasilian pääkaupunki?", "Brasília", "São Paulo", "Salvador", "Rio de Janeiro", "Manaus", "a", ["yleistieto", "maantieto"]],
     ["Missä taistelussa Länsi-Roomalaiset voittivat Attilan hunnit?", "Farsaloksen taistelussa", "Katalaunien kenttien taistelussa", "Cannaen taistelussa", "Teutoburgin taistelussa", "Alesian taistelussa", "b", ["historia"]],
     ["Millä vuosisadalla Islamin usko alkoi?", "Ensimmäisellä vuosisadalla", "800-luvulla", "400-luvulla", "200-luvlla", "600-luvulla", "e", ["historia"]],
     ["Missä seuraavista kaupungeista ei sijaitse linnaa?", "Loviisa", "Kajaani", "Maarianhamina", "Turku", "Helsinki", "c", ["maantieto", "suomi"]],
@@ -99,6 +99,8 @@ const kysymykset = [// kysymys, a, b, c, d, e oikea vastaaus, aihealue(et). Olis
     ["Missä sijaitsee rauniokaupunki Petra?", "Jordaniassa", "Libanonissa", "Syyriassa", "Irakissa", "Saudi-Arabiassa", "a", ["maantieto", "historia"]],
     ["Mikä on Australian pääkaupunki?", "Sydney", "Melbourne", "Brisbane", "Perth", "Canberra", "e", ["yleistieto", "maantieto"]],
     ["Mikä on Sveitsin pääkaupunki?", "Zürich", "Basel", "Bern", "Geneve", "Lausanne", "c", ["yleistieto", "maantieto"]],
+    ["Mistä maasta kotoisin ovat aksolotlit?", "Meksikosta", "Kolumbiasta", "Yhdysvalloista", "Brasiliasta", "Chilestä", "a", ["luonto"]],
+    ["Minkä niminen on Pluton suurin kuu?", "Sedna", "Kharon", "Eris", "Enceladus", "Triton", "b", ["yleistieto", "tiede"]],
 ]
 const helpotKysymykset = [// kysymys, a, b, c, d, oikea vastaaus, aihealue(et)  
     ["Ketä pidetään ensimmäisenä historiotsijana?", "Plutarkhosta", "Tacitusta", "Herodotosta", "Sokratesta", "c", ["historia"]],
@@ -139,7 +141,6 @@ const helpotKysymykset = [// kysymys, a, b, c, d, oikea vastaaus, aihealue(et)
     ["Mikä näistä ei ole Helsingissä?", "Näsinneula", "Senaatintori", "Ateneum", "Linnanmäki", "a", ["yleistieto", "suomi"]],
     ["Mikä on Suomen yleisin sukunimi?", "Korhonen", "Virtanen", "Mäkinen", "Nieminen", "a", ["yleistieto", "suomi"]],
     ["Kuka kirjoitti Taru sormusten herrasta -romaanin?", "C.S. Lewis", "J.R.R. Tolkien", "George R.R. Martin", "J.K. Rowling", "b", ["yleistieto", "kulttuuri"]],
-    ["Mikä yritys loi Angry Birds -pelisarjan?", "Mojang", "Supercell", "Rovio", "Epic Games", "c", ["yleistieto", "kulttuuri"]],
     ["Kuka perusti Amazon-verkkokaupan?", "Bill Gates", "Steve Jobs", "Mark Zuckerberg", "Jeff Bezos", "d", ["yleistieto"]],
     ["Minkä nimesessä tapahtumassa aine muuttuu suoraan kiinteästä kaasuksi?", "Höyrystyminen", "Tiivistyminen", "Härmistyminen", "Sublimoituminen", "d", ["yleistieto", "tiede"]],
     ["Mikä näistä uskonnoista ei alkunut Lähi-Idästä?", "Nämä kaikki alkoivat", "Juutalaisuus", "Kristinusko", "Islam", "a", ["yleistieto", "kulttuuri"]],
@@ -169,7 +170,7 @@ const helpotKysymykset = [// kysymys, a, b, c, d, oikea vastaaus, aihealue(et)
     ["Missä sijaitsee Aurinkokunnan korkein vuori?", "Maapallolla", "Iolla", "Marsilla", "Mirandalla", "c", ["tiede"]],
     ["Mikä on kaikista suosituin tv-sarja koskaan (2025)?", "The Simpsons", "Game of Thrones", "Breaking Bad", "Stranger Things", "b", ["yleistieto", "kulttuuri"]],
     ["Milloin viimeksi Suomi voitti jääkiekon maailmanmestaruuskilpailut (2025)?", "2019", "2020", "2021", "2022", "d", ["yleistieto", "urheilu", "suomi"]],
-    ["Mikä om Viron suurin saari?", "Hiidenmaa", "Saarenmaa", "Vormsi", "Muhu", ["maantieto"]],
+    ["Mikä om Viron suurin saari?", "Hiidenmaa", "Saarenmaa", "Vormsi", "Muhu", "b", ["maantieto"]],
     ["Mikä seuraavista ei ole totta Ahvenanmaasta?", "Sen pääkaupunki on Maarianhamina", "Siellä tiet ovat punaisia", "Kastelholman linna sijaitsee siellä", "Siellä on eniten/tiheinten punkkeja", "d", ["maantieto"]],
     ["Kuka sävelsi Für Elise -teoksen?", "Wolfgang Amadeus Mozart", "Ludwig van Beethoven", "Johann Sebastian Bach", "Frédéric Chopin", "b", ["kulttuuri"]],
     ["Kuka maalasi Tähtikirkas yö -maalauksen?", "Pablo Picasso", "Rembrandt", "Vincent van Gogh", "Leonardo da Vinci", "c", ["kulttuuri"]],
@@ -183,9 +184,12 @@ const helpotKysymykset = [// kysymys, a, b, c, d, oikea vastaaus, aihealue(et)
     ["Kuka heistä ei ole Harry Potter -kirjasarjassa esiintyvä hahmo?", "Remus Lupin", "Alastor Vauhkomieli", "Bellatrix Lestrange", "Sandor Clegane", ["yleistieto", "kulttuuri"]],
     ["Mistä maasta Lego on kotoisin?", "Tanskasta", "Ruotsista", "Norjasta", "Saksasta", "c", ["yleistieto", "kulttuuri"]],
     ["Mikä on Kreikan pääkaupunki?", "Ateena", "Thessaloniki", "Patras", "Heraklion", "d", ["yleistieto", "maantieto"]],
+    ["Minkä väristä on lapislatsuli?", "Punaista", "Sininistä", "Vihreää", "Keltaista", "b", ["yleistieto", "luonto"]],
+    ["Minkä väristä on jade?", "Vihreää", "Sinistä", "Punaista", "Keltaista", "a", ["yleistieto", "luonto"]],
     //["Mistä sanoista sana GOAT tulee?", "Greatest of all time", ["yleistieto"]]
 ]
 const hyvinHelpotKysymykset = [
+    ["Mikä yritys loi Angry Birds -pelisarjan?", "Mojang", "Supercell", "Rovio", "Epic Games", "c", ["yleistieto", "kulttuuri"]],
     ["Milloin Suomi itsenäistyi?", "1914", "1917", "1939", "1920", "b", ["yleistieto","historia", "suomi"]],
     ["Mikä on Suomen pääkaupunki?", "Turku", "Tampere", "Oulu", "Helsinki", "d", ["yleistieto", "maantieto", "suomi"]],
     ["Mikä on pinta-alaltaan maailman suurin valtio?", "Kanada", "Kiina", "Yhdysvallat", "Venäjä", "d", ["yleistieto", "maantieto"]],
@@ -248,7 +252,8 @@ const hyvinHelpotKysymykset = [
     ["Minkä maan lippu on punainen valkoisella ristillä?", "Tanskan", "Sveitsin", "Ruotsin", "Norjan", "a", ["yleistieto", "maantieto"]],
     ["Minkä kansalaisia olivat mm. Aristoteles, Aleksanteri Suuri ja Sokrates?", "Roomalaisia", "Egyptiläisiä", "Kreikkalaisia", "Persialaisia", "c", ["historia"]],
     ["Minkä yrityksen kehitttämä on Fortnite-peli?", "Mojang", "Epic Games", "Supercell", "Valve", "b", ["yleistieto", "kulttuuri"]],
-    ["Mitä nimeä ei käytetä Suomen metsistä löytyvästä oranssista marjasta?", "Hilla", "Muurain", "Lakka", "Appelsiini", "d", ["yleistieto", "luonto", "suomi"]]
+    ["Mitä nimeä ei käytetä Suomen metsistä löytyvästä oranssista marjasta?", "Hilla", "Muurain", "Lakka", "Appelsiini", "d", ["yleistieto", "luonto", "suomi"]],
+    ["Mikä seuraavista ei ole oikea eläin?", "Aksolotli", "Hirvikärpänen", /*"Vesinokkaeläin",*/ "Sarvivalas", "Aarnikotka", "d", ["yleistieto", "luonto"]]
 ]
 const vaikeatKysymykset = [// kysymys, a, b, c, d, e, f oikea vastaaus, aihealue(et)   
     ["Minä vuonna Stalin kuoli?", "1953", "1947", "1961", "1950", "1949", "1945", "a", ["historia"]],
@@ -268,7 +273,7 @@ const vaikeatKysymykset = [// kysymys, a, b, c, d, e, f oikea vastaaus, aihealue
     ["Mikä seuraavista ei saapunut Eurooppaan Amerikasta?", "Peruna", "Tomaatti", "Kaakao", "Appelsiini", "Maissi", "Tupakka", "d", ["historia", "maantieto"]],
     ["Minä vuonna Gutenberg keksi kirjapainon?", "1420", "1430", "1440", "1450", "1460", "1470", "c", ["yleistieto", "historia"]],
     ["Mistä vanhin tunettu asiakasvalitus valitti?", "Tikarin tylsyydestä", "Sandaalien väärästä koosta", "Tinatilauksen myöhästymisestä", "Viinin huonosta laadusta", /*Ea-nāṣirin */"Huonosta kuparin laadusta", "Viljalastin homehtumisesta", "e", ["historia"]],
-    ["Mikä seuraavista asioista tai asioista ei alun perin tullut antiikin Kreikasta?", "Pythagoraan lause", "Logiikka", "Teatteri", "Heliosentrismi", "Analoginen tietokone", "Maapallon pyöreys", "a", ["historia"]],
+    ["Mikä seuraavista asioista ei alun perin tullut antiikin Kreikasta?", "Pythagoraan lause", "Logiikka", "Teatteri", "Heliosentrismi", "Analoginen tietokone", "Maapallon pyöreys", "a", ["historia"]],
     ["Kuka heistä ei ollut italialainen?", "Antonio Vivaldi", "Leonardo da Vinci", "Pablo Picasso", "Kristoffer Kolumbus", "Enrico Fermi", "Galileo Galilei", "c", ["historia"]], //Ei maailman vaikein kysymys
     ["Millä nimellä kuningas Ozymandias paremmin tunnetaan?", "Kyyros Suuri", "Ramses II", "Hammurabi", "Sargon Suuri", "Dareios I", "Thutmose III", "b", ["historia"]],
     ["Mikä on Mongolian pääkaupunki?", "Ulaanbaatar", "Biškek", "Pjongjang", "Astana", "Samarkand", "Irkutsk", "a", ["maantieto"]],
@@ -280,7 +285,8 @@ const vaikeatKysymykset = [// kysymys, a, b, c, d, e, f oikea vastaaus, aihealue
     ["Mikä on kielellisesti monimuotoisin maa?", "Uganda", "Papua-Uusi-Guinea", "Nigeria", "Indonesia", "Kongon demokraattinen tasavalta", "Intia", "b", ["yleistieto", "kulttuuri"]],
     ["Missä maassa on eniten UNESCOn maailmanperintökohteita?", "Saksassa", "Espanjassa", "Italiassa", "Kiinassa", "Ranskassa", "Intiassa", "c", ["kulttuuri"]],
     ["Mistä kaupungista Marco Polo oli peräisin?", "Milanista", "Genoasta", "Roomasta", "Pisasta", "Venetsiasta", "Firenzestä", "e", ["historia"]],
-    ["Mikä seuraavista ei ole Minna Canthin teos?", "Kauppa-Lopo", "Papin perhe", "Hanna", "Työmiehen vaimo", "Anna-Liisa", "Kovan onnen lapsia", "e", ["kulttuuri"]]//Teoksen nimi oli Anna Liisa, ei Anna-Liisa
+    ["Mikä seuraavista ei ole Minna Canthin teos?", "Kauppa-Lopo", "Papin perhe", "Hanna", "Työmiehen vaimo", "Anna-Liisa", "Kovan onnen lapsia", "e", ["kulttuuri"]],//Teoksen nimi oli Anna Liisa, ei Anna-Liisa
+    ["Missä tutkimusmatkailija James Cook kuoli?", "Uudessa-Seelannissa", "Pääsiässaarella", "Havaijilla", "Madagaskarilla", "Australiassa", "Tahiti-saarella",  "c", ["historia"]],
     //["Mikä seuraavista ei ole totta Julius Ceaserista?", "", "", "", "", "", "", "d", ["historia"]],
     //["Mitä seuraavista ei ole epäilty syyksi Rooman kaatumiselle?", "", "", "", "", "", "", "d", ["historia"]]
 ]
